@@ -28,6 +28,6 @@ jobs:
 
       - name: Run post_image script
         env:
-          USERNAME: ${{ secrets.INSTAGRAM_USERNAME }}
-          PASSWORD: ${{ secrets.INSTAGRAM_PASSWORD }}
+          INSTAGRAM_USERNAME: ${{ secrets.INSTAGRAM_USERNAME }}
+          INSTAGRAM_PASSWORD: ${{ secrets.INSTAGRAM_PASSWORD }}
         run: poetry run python source/post_image.py
