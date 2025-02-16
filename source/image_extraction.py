@@ -36,7 +36,7 @@ def get_votd_image():
     image_content = fetch_image(votd_url)
 
     if image_content:
-        os.makedirs('assets', exist_ok=True)
+        os.makedirs('../assets', exist_ok=True)
         image_path = os.path.join('assets', "votd.jpg")
         save_image(image_content, image_path)
 
