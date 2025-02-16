@@ -1,0 +1,25 @@
+[project]
+name = "source"
+version = "0.1.0"
+description = "This bot will daily post a Bible verse to your Instagram page and Whatsapp status."
+authors = [
+    {name = "amulyaprasanth",email = "amulyaprasanth301@gmail.com"}
+]
+license = {text = "mit"}
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "python-dotenv (>=1.0.1,<2.0.0)",
+    "beautifulsoup4 (>=4.13.3,<5.0.0)",
+    "instagrapi (>=2.1.3,<3.0.0)",
+    "pillow (>=11.1.0,<12.0.0)",
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.4"
+
