@@ -49,7 +49,7 @@ def main():
     login_to_instagram(client, username, password)
 
     # Upload the photo
-    photo_path = "../assets/votd.jpg"
+    photo_path = "assets/votd.jpg"
     caption = "Today's Bible verse, shared from Olive Tree Bible Software. 📖✨"
     upload_photo(client, photo_path, caption)
 
