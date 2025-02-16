@@ -1,0 +1,33 @@
+name: Post Verse Of The Day
+
+on:
+  schedule:
+    - cron: "30 23 * * *" # 05:00 AM IST is 23:30 UTC
+  workflow_dispatch:
+
+jobs:
+  post_image:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.9"
+
+      - name: Install Poetry
+        run: |
+          curl -sSL https://install.python-poetry.org | python3 -
+          echo "::add-path::$HOME/.local/bin"
+
+      - name: Install dependencies
+        run: poetry install
+
+      - name: Run post_image script
+        env:
+          USERNAME: ${{ secrets.INSTAGRAM_USERNAME }}
+          PASSWORD: ${{ secrets.INSTAGRAM_PASSWORD }}
+        run: poetry run python source/post_image.py
