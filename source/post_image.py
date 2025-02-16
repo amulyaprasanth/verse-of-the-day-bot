@@ -10,8 +10,8 @@ logging.basicConfig(level=logging.INFO,
 
 def load_env_variables():
     load_dotenv()
-    username = os.getenv("USERNAME")
-    password = os.getenv("PASSWORD")
+    username = os.getenv("INSTAGRAM_USERNAME")
+    password = os.getenv("INSTAGRAM_PASSWORD")
     if not username or not password:
         logging.error(
             "Instagram credentials are not set in the environment variables.")
