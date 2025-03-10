@@ -20,7 +20,7 @@ This bot automatically posts a daily Bible verse to your Instagram page.
 1. Clone the repository:
 
    ```sh
-   git clone https://github.com/yourusername/verse-of-the-day-bot.git
+   git clone https://github.com/amulyaprasanth/verse-of-the-day-bot.git
    cd verse-of-the-day-bot
    ```
 
